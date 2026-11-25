@@ -1,0 +1,1381 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>传媒映画麻传媒_影像创作者社区与视频内容平台_企业官方门户</title>
+<meta name="description" content="传媒映画麻传媒官方网站，聚焦影像创作与视频内容生态，汇聚原创创作者、精品纪录片与行业观察内容，为企业与创作者搭建值得信赖的影像社区平台。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b3352c'/%3E%3Cpath d='M18 22h28v6H18zM18 32h28v6H18zM18 42h18v6H18z' fill='%23fdf3e7'/%3E%3Ccircle cx='50' cy='45' r='7' fill='%23f2b134'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --mmyh-ink:#20201d;
+    --mmyh-paper:#fdf6ea;
+    --mmyh-red:#b3352c;
+    --mmyh-red-deep:#8c241d;
+    --mmyh-amber:#f2b134;
+    --mmyh-warm:#e9dcc3;
+    --mmyh-line:#dfd0b4;
+    --mmyh-muted:#6f6552;
+    --mmyh-cream:#fffaf0;
+    --mmyh-shadow:0 10px 28px rgba(96,66,20,.10);
+    --mmyh-radius:14px;
+    --mmyh-sticky:112px;
+    --mmyh-font:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--mmyh-font);
+    color:var(--mmyh-ink);
+    background:
+      radial-gradient(circle at 12% 8%, #fbeed6 0%, transparent 42%),
+      radial-gradient(circle at 88% 0%, #f6e3c6 0%, transparent 38%),
+      var(--mmyh-paper);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:800;letter-spacing:.01em;}
+  p{margin:0 0 .9em;}
+  ul,ol{margin:0;padding:0;list-style:none;}
+  button{font-family:inherit;cursor:pointer;}
+  .mmyh-wrap{width:min(1180px,calc(100% - 40px));margin:0 auto;}
+  .mmyh-k{color:var(--mmyh-red-deep);font-weight:700;}
+  .mmyh-section{padding:64px 0;scroll-margin-top:var(--mmyh-sticky);}
+  .mmyh-section--tight{padding:44px 0;}
+  .mmyh-eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.78rem;letter-spacing:.22em;font-weight:700;
+    color:var(--mmyh-red);text-transform:uppercase;
+    margin-bottom:12px;
+  }
+  .mmyh-eyebrow::before{content:"";width:26px;height:3px;border-radius:2px;background:var(--mmyh-amber);}
+  .mmyh-h2{font-size:clamp(1.5rem,2.9vw,2.15rem);}
+  .mmyh-h2 span{color:var(--mmyh-red);}
+  .mmyh-lead{color:var(--mmyh-muted);max-width:70ch;font-size:1.02rem;}
+  .mmyh-divider{height:1px;background:linear-gradient(90deg,var(--mmyh-line),transparent);border:0;margin:0;}
+
+  /* 吸顶区域 */
+  .mmyh-sticky{position:sticky;top:0;z-index:80;}
+  .mmyh-notice{
+    background:linear-gradient(90deg,var(--mmyh-red-deep),var(--mmyh-red) 55%,#c8452f);
+    color:#fdf0dd;font-size:.86rem;
+    display:flex;align-items:center;gap:14px;
+    padding:8px 0;
+  }
+  .mmyh-notice .mmyh-wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+  .mmyh-notice__tag{
+    background:#f2b134;color:#3a1f06;font-weight:800;font-size:.72rem;
+    padding:2px 9px;border-radius:99px;letter-spacing:.06em;flex:none;
+  }
+  .mmyh-notice__track{position:relative;overflow:hidden;flex:1 1 320px;min-width:0;}
+  .mmyh-notice__list{display:flex;gap:34px;white-space:nowrap;animation:mmyh-marquee 30s linear infinite;}
+  .mmyh-notice__list li{flex:none;}
+  .mmyh-notice:hover .mmyh-notice__list{animation-play-state:paused;}
+  @keyframes mmyh-marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  .mmyh-notice__link{flex:none;font-weight:700;border-bottom:1px dashed #f6cf8f;}
+
+  .mmyh-header{background:rgba(253,246,234,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--mmyh-line);}
+  .mmyh-header__bar{display:flex;align-items:center;gap:18px;padding:12px 0;}
+  .mmyh-brand{display:flex;align-items:center;gap:10px;flex:none;}
+  .mmyh-brand__mark{width:42px;height:42px;flex:none;}
+  .mmyh-brand__text strong{display:block;font-size:1.06rem;letter-spacing:.03em;}
+  .mmyh-brand__text small{display:block;font-size:.68rem;letter-spacing:.18em;color:var(--mmyh-muted);}
+  .mmyh-nav{margin-left:auto;}
+  .mmyh-nav__list{display:flex;align-items:center;gap:4px;}
+  .mmyh-nav__link{
+    display:inline-block;padding:8px 11px;border-radius:99px;
+    font-size:.92rem;font-weight:600;color:#3c372c;
+  }
+  .mmyh-nav__link:hover,.mmyh-nav__link:focus-visible{background:var(--mmyh-warm);color:var(--mmyh-red-deep);}
+  .mmyh-search{
+    display:flex;align-items:center;gap:6px;
+    background:#fff;border:1px solid var(--mmyh-line);border-radius:99px;
+    padding:5px 6px 5px 14px;min-width:216px;
+  }
+  .mmyh-search input{
+    border:0;outline:0;background:transparent;font-size:.88rem;width:100%;color:var(--mmyh-ink);
+  }
+  .mmyh-search button{
+    border:0;border-radius:99px;background:var(--mmyh-red);color:#fff;
+    font-size:.82rem;font-weight:700;padding:6px 13px;
+  }
+  .mmyh-search button:hover{background:var(--mmyh-red-deep);}
+  .mmyh-search__hint{font-size:.78rem;color:var(--mmyh-red-deep);margin:8px 0 0;min-height:1.2em;}
+  .mmyh-burger{
+    display:none;border:1px solid var(--mmyh-line);background:#fff;border-radius:10px;
+    width:42px;height:38px;align-items:center;justify-content:center;color:var(--mmyh-red-deep);
+  }
+  .mmyh-burger span{display:block;width:18px;height:2px;background:currentColor;position:relative;}
+  .mmyh-burger span::before,.mmyh-burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:currentColor;}
+  .mmyh-burger span::before{top:-6px;}
+  .mmyh-burger span::after{top:6px;}
+
+  /* 首屏 5:5 大幅图文 */
+  .mmyh-hero{padding:52px 0 60px;position:relative;overflow:hidden;}
+  .mmyh-hero__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center;}
+  .mmyh-hero__badge{
+    display:inline-flex;align-items:center;gap:8px;background:#fff;
+    border:1px solid var(--mmyh-line);border-radius:99px;padding:5px 14px;
+    font-size:.78rem;font-weight:700;color:var(--mmyh-red-deep);letter-spacing:.08em;
+  }
+  .mmyh-hero h1{
+    font-size:clamp(2rem,4.6vw,3.2rem);
+    margin:16px 0 14px;letter-spacing:.02em;
+  }
+  .mmyh-hero h1 em{font-style:normal;color:var(--mmyh-red);}
+  .mmyh-hero__intro{font-size:1.02rem;color:#4a4436;}
+  .mmyh-hero__intro strong{color:var(--mmyh-red-deep);}
+  .mmyh-hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 26px;}
+  .mmyh-btn{
+    display:inline-flex;align-items:center;gap:8px;border-radius:99px;
+    padding:11px 22px;font-weight:700;font-size:.94rem;border:1px solid transparent;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  }
+  .mmyh-btn:hover{transform:translateY(-2px);}
+  .mmyh-btn--primary{background:var(--mmyh-red);color:#fff;box-shadow:0 8px 20px rgba(179,53,44,.28);}
+  .mmyh-btn--primary:hover{background:var(--mmyh-red-deep);}
+  .mmyh-btn--ghost{background:#fff;color:var(--mmyh-red-deep);border-color:var(--mmyh-line);}
+  .mmyh-btn--ghost:hover{border-color:var(--mmyh-red);}
+  .mmyh-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:6px;}
+  .mmyh-stats__item{
+    background:#fff;border:1px solid var(--mmyh-line);border-radius:12px;
+    padding:12px 14px;
+  }
+  .mmyh-stats__num{font-size:1.32rem;font-weight:800;color:var(--mmyh-red-deep);letter-spacing:.02em;}
+  .mmyh-stats__label{font-size:.78rem;color:var(--mmyh-muted);}
+  .mmyh-hero__visual{position:relative;}
+  .mmyh-hero__frame{
+    border-radius:20px;overflow:hidden;border:1px solid var(--mmyh-line);
+    box-shadow:var(--mmyh-shadow);background:#fff;
+  }
+  .mmyh-hero__frame svg{display:block;width:100%;height:auto;}
+  .mmyh-hero__caption{
+    position:absolute;left:18px;right:18px;bottom:-22px;
+    background:#fffdf7;border:1px solid var(--mmyh-line);border-radius:12px;
+    padding:10px 14px;box-shadow:var(--mmyh-shadow);font-size:.85rem;color:#4a4436;
+    display:flex;justify-content:space-between;gap:10px;align-items:center;
+  }
+  .mmyh-hero__caption b{color:var(--mmyh-red-deep);}
+
+  /* 通用卡片 */
+  .mmyh-card{
+    background:#fff;border:1px solid var(--mmyh-line);border-radius:var(--mmyh-radius);
+    padding:20px;transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    min-width:0;
+  }
+  .mmyh-card:hover{transform:translateY(-3px);box-shadow:var(--mmyh-shadow);border-color:#cdb48a;}
+  .mmyh-meta{font-size:.78rem;color:var(--mmyh-muted);display:flex;flex-wrap:wrap;gap:10px;align-items:center;}
+  .mmyh-tag{
+    display:inline-block;font-size:.72rem;font-weight:700;color:var(--mmyh-red-deep);
+    background:#fbeada;border:1px solid #f0d3b8;border-radius:99px;padding:2px 9px;
+  }
+  .mmyh-tag--green{color:#256044;background:#e2f0e6;border-color:#c5e0cd;}
+  .mmyh-tag--blue{color:#1f4d70;background:#e3eef5;border-color:#c6ddec;}
+  .mmyh-tag--amber{color:#7a4a05;background:#fbeec9;border-color:#f0dda6;}
+
+  /* 视频条目 */
+  .mmyh-videolist{display:flex;flex-direction:column;gap:14px;}
+  .mmyh-videorow{
+    display:grid;grid-template-columns:76px minmax(0,1fr);gap:16px;
+    background:#fff;border:1px solid var(--mmyh-line);border-radius:var(--mmyh-radius);
+    padding:16px 18px;transition:border-color .2s ease, box-shadow .2s ease;
+  }
+  .mmyh-videorow:hover{border-color:#cdb48a;box-shadow:var(--mmyh-shadow);}
+  .mmyh-videorow__no{
+    font-size:1.5rem;font-weight:800;color:#e2cfa8;line-height:1;letter-spacing:.02em;
+    display:flex;align-items:flex-start;
+  }
+  .mmyh-videorow h3{font-size:1.02rem;margin-bottom:6px;}
+  .mmyh-videorow p{font-size:.88rem;color:#544d40;margin-bottom:8px;}
+  .mmyh-videorow__foot{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;}
+  .mmyh-acts{display:flex;flex-wrap:wrap;gap:8px;}
+  .mmyh-act{
+    border:1px solid var(--mmyh-line);background:#fffdf7;border-radius:99px;
+    padding:4px 11px;font-size:.78rem;font-weight:700;color:#4a4436;
+    display:inline-flex;align-items:center;gap:5px;transition:all .18s ease;
+  }
+  .mmyh-act:hover{border-color:var(--mmyh-red);color:var(--mmyh-red-deep);}
+  .mmyh-act.is-liked{background:#fbe3d8;border-color:#e9a58f;color:var(--mmyh-red-deep);}
+  .mmyh-act.is-saved{background:#fbeec9;border-color:#e6c777;color:#7a4a05;}
+
+  .mmyh-focus{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:22px;align-items:start;}
+  .mmyh-focus__main{
+    background:#fff;border:1px solid var(--mmyh-line);border-radius:18px;overflow:hidden;
+    box-shadow:var(--mmyh-shadow);
+  }
+  .mmyh-focus__main svg{display:block;width:100%;height:auto;}
+  .mmyh-focus__body{padding:20px 22px 24px;}
+  .mmyh-focus__body h3{font-size:1.22rem;margin-bottom:8px;}
+  .mmyh-focus__body p{font-size:.92rem;color:#4a4436;}
+  .mmyh-focus__side{display:flex;flex-direction:column;gap:14px;}
+
+  .mmyh-grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
+  .mmyh-grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+  .mmyh-grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;}
+
+  /* 专区 */
+  .mmyh-topic{
+    background:#fff;border:1px solid var(--mmyh-line);border-radius:16px;padding:20px;
+    display:flex;flex-direction:column;gap:10px;min-width:0;
+  }
+  .mmyh-topic h3{font-size:1.02rem;}
+  .mmyh-topic ul{display:flex;flex-direction:column;gap:8px;}
+  .mmyh-topic li{
+    font-size:.85rem;color:#4a4436;border-left:3px solid var(--mmyh-amber);
+    padding-left:10px;line-height:1.6;
+  }
+  .mmyh-topic__status{font-size:.75rem;font-weight:700;color:#256044;}
+
+  /* 作者 */
+  .mmyh-authors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+  .mmyh-author{
+    display:grid;grid-template-columns:64px minmax(0,1fr);gap:14px;
+    background:#fff;border:1px solid var(--mmyh-line);border-radius:16px;padding:18px;
+    min-width:0;
+  }
+  .mmyh-avatar{
+    width:64px;height:64px;border-radius:50%;display:grid;place-items:center;
+    font-weight:800;font-size:1.32rem;color:#fff;flex:none;letter-spacing:.02em;
+  }
+  .mmyh-author h3{font-size:1rem;margin-bottom:2px;}
+  .mmyh-author__field{font-size:.78rem;color:var(--mmyh-red-deep);font-weight:700;margin-bottom:6px;}
+  .mmyh-author p{font-size:.85rem;color:#4a4436;margin-bottom:8px;}
+  .mmyh-author__nums{font-size:.76rem;color:var(--mmyh-muted);display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;}
+
+  /* 评价 */
+  .mmyh-reviews{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;}
+  .mmyh-review{
+    background:#fff;border:1px solid var(--mmyh-line);border-radius:14px;padding:18px;
+    display:flex;flex-direction:column;gap:10px;min-width:0;
+  }
+  .mmyh-review__head{display:flex;align-items:center;gap:10px;}
+  .mmyh-review__ava{
+    width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+    font-size:.82rem;font-weight:800;color:#fff;flex:none;
+  }
+  .mmyh-review__name{font-size:.88rem;font-weight:700;}
+  .mmyh-review__stars{color:var(--mmyh-amber);font-size:.82rem;letter-spacing:.1em;}
+  .mmyh-review p{font-size:.88rem;color:#4a4436;margin:0;}
+  .mmyh-review__src{font-size:.75rem;color:var(--mmyh-muted);}
+  .mmyh-rating{
+    display:flex;flex-wrap:wrap;gap:22px;align-items:center;
+    background:#fff;border:1px solid var(--mmyh-line);border-radius:16px;padding:20px 24px;margin-bottom:18px;
+  }
+  .mmyh-rating__score{font-size:2.4rem;font-weight:800;color:var(--mmyh-red-deep);line-height:1;}
+  .mmyh-rating__score small{font-size:.9rem;color:var(--mmyh-muted);font-weight:600;}
+  .mmyh-rating__bars{flex:1 1 260px;min-width:200px;display:flex;flex-direction:column;gap:6px;}
+  .mmyh-rating__bar{display:flex;align-items:center;gap:10px;font-size:.78rem;color:var(--mmyh-muted);}
+  .mmyh-rating__bar i{display:block;height:7px;border-radius:99px;background:var(--mmyh-amber);}
+
+  /* FAQ */
+  .mmyh-faq{display:flex;flex-direction:column;gap:10px;}
+  .mmyh-faq details{
+    background:#fff;border:1px solid var(--mmyh-line);border-radius:12px;padding:0 18px;
+  }
+  .mmyh-faq summary{
+    list-style:none;cursor:pointer;padding:14px 0;font-weight:700;font-size:.95rem;
+    display:flex;justify-content:space-between;gap:14px;align-items:center;
+  }
+  .mmyh-faq summary::-webkit-details-marker{display:none;}
+  .mmyh-faq summary::after{content:"＋";color:var(--mmyh-red);font-weight:800;}
+  .mmyh-faq details[open] summary::after{content:"－";}
+  .mmyh-faq details p{font-size:.88rem;color:#4a4436;padding-bottom:14px;margin:0;}
+
+  /* 动态 / 合作 */
+  .mmyh-timeline{display:flex;flex-direction:column;gap:0;}
+  .mmyh-timeline__item{
+    display:grid;grid-template-columns:110px minmax(0,1fr);gap:18px;
+    padding:16px 0;border-bottom:1px dashed var(--mmyh-line);
+  }
+  .mmyh-timeline__item:last-child{border-bottom:0;}
+  .mmyh-timeline__date{font-size:.82rem;font-weight:800;color:var(--mmyh-red-deep);letter-spacing:.04em;}
+  .mmyh-timeline__item h3{font-size:.96rem;margin-bottom:4px;}
+  .mmyh-timeline__item p{font-size:.86rem;color:#4a4436;margin:0;}
+  .mmyh-partners{display:flex;flex-wrap:wrap;gap:12px;}
+  .mmyh-partner{
+    background:#fff;border:1px solid var(--mmyh-line);border-radius:12px;
+    padding:12px 18px;font-weight:700;font-size:.88rem;color:#4a4436;
+    display:flex;align-items:center;gap:8px;
+  }
+  .mmyh-partner i{width:9px;height:9px;border-radius:50%;background:var(--mmyh-amber);display:block;}
+
+  /* 解析长文 */
+  .mmyh-prose{max-width:none;color:#3f3a2f;font-size:.98rem;}
+  .mmyh-prose h3{font-size:1.1rem;margin:22px 0 8px;color:var(--mmyh-red-deep);}
+  .mmyh-prose p{margin-bottom:.85em;}
+  .mmyh-prose ul{display:flex;flex-direction:column;gap:7px;margin:10px 0 14px;}
+  .mmyh-prose li{padding-left:18px;position:relative;font-size:.94rem;}
+  .mmyh-prose li::before{content:"";position:absolute;left:0;top:.72em;width:7px;height:7px;border-radius:2px;background:var(--mmyh-amber);}
+  .mmyh-pull{
+    border-left:4px solid var(--mmyh-red);background:#fff;border-radius:0 12px 12px 0;
+    padding:14px 18px;font-size:.94rem;color:#4a4436;margin:16px 0;
+  }
+
+  /* 页脚 */
+  .mmyh-footer{
+    background:linear-gradient(180deg,#2a2620,#201d18);color:#e7ddca;
+    padding:52px 0 24px;margin-top:20px;
+  }
+  .mmyh-footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;}
+  .mmyh-footer h4{font-size:.92rem;color:#fff;margin-bottom:12px;letter-spacing:.06em;}
+  .mmyh-footer p,.mmyh-footer li{font-size:.84rem;color:#bdb2a0;line-height:1.9;}
+  .mmyh-footer li a:hover{color:var(--mmyh-amber);}
+  .mmyh-footer__brand{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+  .mmyh-footer__brand strong{color:#fff;font-size:1.04rem;}
+  .mmyh-footer__bottom{
+    margin-top:34px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);
+    display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between;
+    font-size:.78rem;color:#9c9282;
+  }
+
+  /* 互动 */
+  .mmyh-backtop{
+    position:fixed;right:20px;bottom:22px;z-index:90;
+    width:46px;height:46px;border-radius:50%;border:0;
+    background:var(--mmyh-red);color:#fff;font-size:1.1rem;font-weight:800;
+    box-shadow:0 10px 24px rgba(140,36,29,.36);display:none;place-items:center;
+  }
+  .mmyh-backtop.is-show{display:grid;}
+  .mmyh-toast{
+    position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+    background:#201d18;color:#fdf6ea;padding:10px 20px;border-radius:99px;
+    font-size:.86rem;font-weight:600;opacity:0;pointer-events:none;
+    transition:all .25s ease;z-index:120;max-width:calc(100% - 40px);
+  }
+  .mmyh-toast.is-show{opacity:1;transform:translate(-50%,0);}
+  .mmyh-modal{
+    position:fixed;inset:0;z-index:110;display:none;
+    align-items:center;justify-content:center;padding:20px;
+  }
+  .mmyh-modal.is-open{display:flex;}
+  .mmyh-modal__mask{position:absolute;inset:0;background:rgba(28,24,18,.55);}
+  .mmyh-modal__box{
+    position:relative;background:var(--mmyh-cream);border-radius:18px;
+    width:min(560px,100%);max-height:86vh;overflow:auto;padding:26px;
+    box-shadow:0 30px 70px rgba(0,0,0,.32);
+  }
+  .mmyh-modal__box h3{font-size:1.14rem;margin-bottom:8px;}
+  .mmyh-modal__box p{font-size:.9rem;color:#4a4436;}
+  .mmyh-modal__close{
+    position:absolute;top:12px;right:14px;border:0;background:transparent;
+    font-size:1.3rem;line-height:1;color:var(--mmyh-muted);
+  }
+  .mmyh-field{display:block;margin:12px 0;}
+  .mmyh-field span{display:block;font-size:.8rem;font-weight:700;margin-bottom:5px;color:#4a4436;}
+  .mmyh-field input,.mmyh-field textarea{
+    width:100%;border:1px solid var(--mmyh-line);border-radius:10px;padding:9px 12px;
+    font-family:inherit;font-size:.9rem;background:#fff;color:var(--mmyh-ink);outline:0;
+  }
+  .mmyh-field input:focus,.mmyh-field textarea:focus{border-color:var(--mmyh-red);}
+  .mmyh-shares{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;}
+
+  @media (max-width:980px){
+    :root{--mmyh-sticky:104px;}
+    .mmyh-hero__grid{grid-template-columns:1fr;gap:34px;}
+    .mmyh-focus{grid-template-columns:1fr;}
+    .mmyh-grid3{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .mmyh-grid4{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .mmyh-footer__grid{grid-template-columns:1fr 1fr;}
+    .mmyh-search{min-width:170px;}
+    .mmyh-nav{display:none;}
+    .mmyh-nav.is-open{
+      display:block;position:absolute;left:0;right:0;top:100%;
+      background:var(--mmyh-cream);border-bottom:1px solid var(--mmyh-line);
+      padding:10px 20px 18px;box-shadow:var(--mmyh-shadow);
+    }
+    .mmyh-nav.is-open .mmyh-nav__list{flex-direction:column;align-items:stretch;gap:2px;}
+    .mmyh-header__bar{position:relative;flex-wrap:wrap;}
+    .mmyh-burger{display:inline-flex;margin-left:auto;}
+    .mmyh-search{order:4;flex:1 1 100%;}
+  }
+  @media (max-width:720px){
+    :root{--mmyh-sticky:96px;}
+    .mmyh-section{padding:46px 0;}
+    .mmyh-grid3,.mmyh-grid2,.mmyh-grid4,.mmyh-authors,.mmyh-reviews{grid-template-columns:minmax(0,1fr);}
+    .mmyh-stats{grid-template-columns:1fr 1fr;}
+    .mmyh-hero{padding:34px 0 48px;}
+    .mmyh-hero__caption{position:static;margin-top:12px;box-shadow:none;}
+    .mmyh-timeline__item{grid-template-columns:1fr;gap:4px;}
+    .mmyh-videorow{grid-template-columns:1fr;}
+    .mmyh-videorow__no{font-size:1.1rem;}
+    .mmyh-footer__grid{grid-template-columns:1fr;}
+    .mmyh-notice__link{display:none;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .mmyh-notice__list{animation:none;}
+    .mmyh-card:hover,.mmyh-btn:hover{transform:none;}
+  }
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<!-- S1 公告条 + 页头 -->
+<div class="mmyh-sticky">
+  <div class="mmyh-notice" role="region" aria-label="最新公告">
+    <div class="mmyh-wrap">
+      <span class="mmyh-notice__tag">官方发布</span>
+      <div class="mmyh-notice__track">
+        <ul class="mmyh-notice__list">
+          <li>「城市光影计划·第4季」征片开启，投稿截止 12 月 18 日</li>
+          <li>新片上线：《一条街的十二小时》4K 高清正版首发</li>
+          <li>创作者成长营第 12 期报名中，含剪辑与叙事双课</li>
+          <li>「年度口碑榜」投票通道开放，共 36 部原创作品入围</li>
+          <li>摄影棚开放日：11 月 30 日，限额 40 人</li>
+          <li>「城市光影计划·第4季」征片开启，投稿截止 12 月 18 日</li>
+          <li>新片上线：《一条街的十二小时》4K 高清正版首发</li>
+          <li>创作者成长营第 12 期报名中，含剪辑与叙事双课</li>
+          <li>「年度口碑榜」投票通道开放，共 36 部原创作品入围</li>
+          <li>摄影棚开放日：11 月 30 日，限额 40 人</li>
+        </ul>
+      </div>
+      <a class="mmyh-notice__link" href="#mmyh-news">查看全部动态 →</a>
+    </div>
+  </div>
+
+  <header class="mmyh-header">
+    <div class="mmyh-wrap mmyh-header__bar">
+      <a class="mmyh-brand" href="#mmyh-top" aria-label="传媒映画麻传媒 首页">
+        <svg class="mmyh-brand__mark" viewBox="0 0 64 64" role="img" aria-label="传媒映画麻传媒品牌标识：胶片与镜头">
+          <rect width="64" height="64" rx="14" fill="#b3352c"/>
+          <path d="M14 20h26v7H14zM14 30h36v7H14zM14 40h22v7H14z" fill="#fdf3e7" opacity=".92"/>
+          <circle cx="48" cy="43" r="8" fill="#f2b134"/>
+          <circle cx="48" cy="43" r="3.4" fill="#8c241d"/>
+        </svg>
+        <span class="mmyh-brand__text">
+          <strong>传媒映画麻传媒</strong>
+          <small>OFFICIAL · 影像内容品牌</small>
+        </span>
+      </a>
+      <button class="mmyh-burger" id="mmyh-burger" aria-label="展开导航菜单" aria-expanded="false"><span></span></button>
+      <nav class="mmyh-nav" id="mmyh-nav" aria-label="主导航">
+        <ul class="mmyh-nav__list">
+          <li><a class="mmyh-nav__link" href="#mmyh-focus">焦点</a></li>
+          <li><a class="mmyh-nav__link" href="#mmyh-videos">影像库</a></li>
+          <li><a class="mmyh-nav__link" href="#mmyh-topics">专题企划</a></li>
+          <li><a class="mmyh-nav__link" href="#mmyh-authors">创作者</a></li>
+          <li><a class="mmyh-nav__link" href="#mmyh-insight">深度解析</a></li>
+          <li><a class="mmyh-nav__link" href="#mmyh-voices">口碑</a></li>
+          <li><a class="mmyh-nav__link" href="#mmyh-faq">帮助</a></li>
+        </ul>
+      </nav>
+      <form class="mmyh-search" id="mmyh-search" role="search" onsubmit="return false;">
+        <input type="search" id="mmyh-search-input" placeholder="搜索影片 / 创作者 / 专题" aria-label="站内搜索">
+        <button type="submit">搜索</button>
+      </form>
+    </div>
+    <div class="mmyh-wrap"><p class="mmyh-search__hint" id="mmyh-search-hint" aria-live="polite"></p></div>
+  </header>
+</div>
+
+<main id="mmyh-top">
+
+  <!-- S2 品牌首屏 -->
+  <section class="mmyh-hero" aria-labelledby="mmyh-hero-title">
+    <div class="mmyh-wrap mmyh-hero__grid">
+      <div>
+        <span class="mmyh-hero__badge">品牌官网 · 持续运营 11 年</span>
+        <h1 id="mmyh-hero-title">传媒映画麻传媒<em>·</em>影像内容与创作者社区官方门户</h1>
+        <p class="mmyh-hero__intro">
+          作为国内较早以纪实影像为起点的<strong>企业级视频品牌</strong>，传媒映画麻传媒官方网站把镜头交给城市、手艺与普通人。我们以原创、正版、高清为底线，用长期主义的拍摄方法记录真实生活，也为创作者提供从选题、拍摄到发行的完整内容生态。这里既有作品的放映厅，也有同行的会客厅。
+        </p>
+        <div class="mmyh-hero__actions">
+          <a class="mmyh-btn mmyh-btn--primary" href="#mmyh-videos">进入影像库</a>
+          <a class="mmyh-btn mmyh-btn--ghost" href="#mmyh-topics">浏览专题企划</a>
+          <button class="mmyh-btn mmyh-btn--ghost" type="button" data-mmyh-modal="submit">投稿入口</button>
+        </div>
+        <div class="mmyh-stats">
+          <div class="mmyh-stats__item">
+            <div class="mmyh-stats__num">2,860+</div>
+            <div class="mmyh-stats__label">原创高清作品</div>
+          </div>
+          <div class="mmyh-stats__item">
+            <div class="mmyh-stats__num">386 位</div>
+            <div class="mmyh-stats__label">签约与驻站创作者</div>
+          </div>
+          <div class="mmyh-stats__item">
+            <div class="mmyh-stats__num">11 年</div>
+            <div class="mmyh-stats__label">内容品牌持续运营</div>
+          </div>
+        </div>
+      </div>
+      <div class="mmyh-hero__visual">
+        <div class="mmyh-hero__frame">
+          <svg viewBox="0 0 720 520" role="img" aria-label="深夜剪辑室中导演与剪辑师对着监视器调色的工作场景插画" style="aspect-ratio:18/13;">
+            <defs>
+              <linearGradient id="mmyh-g1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#2b2620"/><stop offset="1" stop-color="#4a3b2b"/>
+              </linearGradient>
+              <linearGradient id="mmyh-g2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#f6d79a"/><stop offset="1" stop-color="#e0a94a"/>
+              </linearGradient>
+            </defs>
+            <rect width="720" height="520" fill="url(#mmyh-g1)"/>
+            <circle cx="596" cy="86" r="52" fill="#f2b134" opacity=".22"/>
+            <rect x="60" y="72" width="330" height="212" rx="10" fill="#171512" stroke="#6f5f47" stroke-width="2"/>
+            <rect x="78" y="90" width="294" height="176" rx="6" fill="#3f5f52"/>
+            <path d="M78 214 L168 156 L252 206 L330 152 L372 196 V266 H78 Z" fill="#2f4a40"/>
+            <circle cx="300" cy="126" r="18" fill="#f6d79a" opacity=".85"/>
+            <rect x="150" y="284" width="150" height="26" rx="6" fill="#8c241d"/>
+            <rect x="404" y="286" width="252" height="138" rx="10" fill="#241f19" stroke="#6f5f47" stroke-width="2"/>
+            <rect x="420" y="300" width="220" height="14" rx="7" fill="#b3352c" opacity=".85"/>
+            <rect x="420" y="326" width="180" height="10" rx="5" fill="#8a7a5f"/>
+            <rect x="420" y="346" width="206" height="10" rx="5" fill="#8a7a5f"/>
+            <rect x="420" y="366" width="140" height="10" rx="5" fill="#f2b134" opacity=".8"/>
+            <rect x="420" y="386" width="196" height="10" rx="5" fill="#8a7a5f"/>
+            <g>
+              <circle cx="130" cy="410" r="34" fill="url(#mmyh-g2)"/>
+              <rect x="96" y="444" width="68" height="52" rx="14" fill="#f6d79a" opacity=".85"/>
+            </g>
+            <g>
+              <circle cx="536" cy="466" r="30" fill="#c95f47"/>
+              <rect x="504" y="496" width="64" height="24" rx="10" fill="#c95f47" opacity=".7"/>
+            </g>
+            <path d="M60 470 h600" stroke="#6f5f47" stroke-width="2" stroke-dasharray="8 8"/>
+          </svg>
+        </div>
+        <div class="mmyh-hero__caption">
+          <span><b>正在放映</b>《一条街的十二小时》· 4K 正版</span>
+          <button class="mmyh-act" type="button" data-mmyh-copy="https://example.invalid/mmyh/film/street-12h">复制影片链接</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 焦点内容 -->
+  <section class="mmyh-section" id="mmyh-focus" aria-labelledby="mmyh-focus-title">
+    <div class="mmyh-wrap">
+      <span class="mmyh-eyebrow">Focus / 本周焦点</span>
+      <h2 class="mmyh-h2" id="mmyh-focus-title">传媒映画麻传媒 <span>本周焦点</span> 与推荐片单</h2>
+      <p class="mmyh-lead">每周三我们从影像库中挑出四部作品：一部是本季主推，三部是编辑手记里反复提到的。所有作品均为平台原创、正版授权、提供高清版本，适合在安静的晚上一次看完。</p>
+
+      <div class="mmyh-focus" style="margin-top:26px;">
+        <article class="mmyh-focus__main">
+          <svg viewBox="0 0 720 405" role="img" aria-label="清晨老城区早市上摊主摆出第一笼包子的纪实画面" style="aspect-ratio:16/9;">
+            <defs>
+              <linearGradient id="mmyh-g3" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#f8e7c4"/><stop offset="1" stop-color="#e0b477"/>
+              </linearGradient>
+            </defs>
+            <rect width="720" height="405" fill="url(#mmyh-g3)"/>
+            <circle cx="598" cy="82" r="46" fill="#f6c76a"/>
+            <rect x="0" y="248" width="720" height="157" fill="#c99b62"/>
+            <path d="M0 248 L138 186 L286 236 L436 178 L572 232 L720 192 V248 Z" fill="#a97f4d"/>
+            <g>
+              <rect x="72" y="252" width="180" height="86" rx="8" fill="#8c5a33"/>
+              <rect x="84" y="230" width="156" height="26" rx="8" fill="#f6d79a"/>
+              <circle cx="118" cy="244" r="11" fill="#fff8e8"/>
+              <circle cx="150" cy="244" r="11" fill="#fff8e8"/>
+              <circle cx="182" cy="244" r="11" fill="#fff8e8"/>
+              <circle cx="214" cy="244" r="11" fill="#fff8e8"/>
+            </g>
+            <g>
+              <rect x="330" y="264" width="250" height="72" rx="6" fill="#b3352c" opacity=".82"/>
+              <rect x="344" y="280" width="60" height="40" rx="4" fill="#fdf3e7" opacity=".8"/>
+              <rect x="418" y="280" width="60" height="40" rx="4" fill="#fdf3e7" opacity=".6"/>
+              <rect x="492" y="280" width="60" height="40" rx="4" fill="#fdf3e7" opacity=".8"/>
+            </g>
+            <g>
+              <circle cx="620" cy="308" r="26" fill="#3f5f52"/>
+              <rect x="590" y="334" width="60" height="60" rx="12" fill="#3f5f52" opacity=".8"/>
+            </g>
+            <g stroke="#7a5530" stroke-width="2" opacity=".5">
+              <path d="M0 356 h720"/>
+              <path d="M0 384 h720"/>
+            </g>
+          </svg>
+          <div class="mmyh-focus__body">
+            <div class="mmyh-meta">
+              <span class="mmyh-tag">纪实短片</span>
+              <span>导演：陈迟</span>
+              <span>时长 24:16</span>
+              <span>2026-11-18 官方发布</span>
+            </div>
+            <h3>《一条街的十二小时》：早市开张前，那些还没被拍到的动作</h3>
+            <p>纪录片《一条街的十二小时》跟拍老城区一条不足四百米的街。凌晨三点四十，第一位摊主推着车出现；六点二十，第一笼包子出屉；十一点，收摊的人开始擦桌子。导演把一天切成十二个时辰，每一段只用一个固定机位，却拍出了这条街几十年积累下来的节奏。这是传媒映画麻传媒本季最看重的作品，也是平台"真实、陪伴"内容主张的集中体现。</p>
+            <div class="mmyh-acts">
+              <button class="mmyh-act" type="button" data-mmyh-like>♡ 喜欢 <span data-mmyh-like-count>3,482</span></button>
+              <button class="mmyh-act" type="button" data-mmyh-save>☆ 收藏</button>
+              <button class="mmyh-act" type="button" data-mmyh-copy="https://example.invalid/mmyh/film/street-12h">复制链接</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="mmyh-focus__side">
+          <article class="mmyh-card">
+            <div class="mmyh-meta"><span class="mmyh-tag mmyh-tag--green">人物访谈</span><span>时长 31:02</span></div>
+            <h3 style="font-size:1.04rem;margin:8px 0 6px;">《剪了十七年片子的人》：把一场雨剪成三分钟</h3>
+            <p style="font-size:.88rem;color:#4a4436;margin-bottom:10px;">资深剪辑师周叙谈"素材的耐心"：为什么好的转场不是炫技，而是替观众省下一次眨眼。</p>
+            <div class="mmyh-acts">
+              <button class="mmyh-act" type="button" data-mmyh-like>♡ 喜欢 <span data-mmyh-like-count>1,914</span></button>
+              <button class="mmyh-act" type="button" data-mmyh-save>☆ 收藏</button>
+            </div>
+          </article>
+          <article class="mmyh-card">
+            <div class="mmyh-meta"><span class="mmyh-tag mmyh-tag--blue">行业观察</span><span>时长 18:44</span></div>
+            <h3 style="font-size:1.04rem;margin:8px 0 6px;">《一个小团队如何一年做完六部短片》</h3>
+            <p style="font-size:.88rem;color:#4a4436;margin-bottom:10px;">从选题会到粗剪、调色、发行，完整拆解七人团队的工作流，附可下载的项目排期表。</p>
+            <div class="mmyh-acts">
+              <button class="mmyh-act" type="button" data-mmyh-like>♡ 喜欢 <span data-mmyh-like-count>1,203</span></button>
+              <button class="mmyh-act" type="button" data-mmyh-save>☆ 收藏</button>
+            </div>
+          </article>
+          <article class="mmyh-card">
+            <div class="mmyh-meta"><span class="mmyh-tag mmyh-tag--amber">教程干货</span><span>时长 22:10</span></div>
+            <h3 style="font-size:1.04rem;margin:8px 0 6px;">《阴天怎么拍》· 光线不足时的三种取舍</h3>
+            <p style="font-size:.88rem;color:#4a4436;margin-bottom:10px;">不讲参数堆砌，只讲判断顺序：先保曝光还是先保情绪，本片给出可直接照做的现场方案。</p>
+            <div class="mmyh-acts">
+              <button class="mmyh-act" type="button" data-mmyh-like>♡ 喜欢 <span data-mmyh-like-count>2,076</span></button>
+              <button class="mmyh-act" type="button" data-mmyh-save>☆ 收藏</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 视频内容 S3 主体 -->
+  <section class="mmyh-section mmyh-section--tight" id="mmyh-videos" aria-labelledby="mmyh-videos-title">
+    <div class="mmyh-wrap">
+      <span class="mmyh-eyebrow">Library / 影像库</span>
+      <h2 class="mmyh-h2" id="mmyh-videos-title">影像库：<span>六部正在被反复播放的</span>原创作品</h2>
+      <p class="mmyh-lead">影像库是传媒映画麻传媒最核心的内容资产。下列六部作品分别来自纪录、访谈、教程与城市探索方向，均可在线高清观看；点击"复制链接"可以把作品页分享给一起拍片的人。</p>
+
+      <div class="mmyh-videolist" style="margin-top:24px;">
+        <article class="mmyh-videorow">
+          <div class="mmyh-videorow__no">01</div>
+          <div>
+            <div class="mmyh-meta" style="margin-bottom:6px;"><span class="mmyh-tag">城市探索</span><span>作者：林见山</span><span>18:32</span></div>
+            <h3>《沿着旧铁路走一天》：一条被遗忘的支线如何被重新看见</h3>
+            <p>摄制组沿着停运十二年的支线徒步二十七公里，记录沿线四个小镇的日常。片中不设旁白，只保留环境声与车站广播，试着让地理本身说话。</p>
+            <div class="mmyh-videorow__foot">
+              <div class="mmyh-meta"><span>▶ 12.6万播放</span><span>♡ 4,208</span><span>☆ 1,932</span></div>
+              <div class="mmyh-acts">
+                <button class="mmyh-act" type="button" data-mmyh-like>♡ 喜欢 <span data-mmyh-like-count>4,208</span></button>
+                <button class="mmyh-act" type="button" data-mmyh-save>☆ 收藏</button>
+                <button class="mmyh-act" type="button" data-mmyh-copy="https://example.invalid/mmyh/film/old-railway">复制链接</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="mmyh-videorow">
+          <div class="mmyh-videorow__no">02</div>
+          <div>
+            <div class="mmyh-meta" style="margin-bottom:6px;"><span class="mmyh-tag mmyh-tag--green">创作幕后</span><span>作者：周叙</span><span>26:05</span></div>
+            <h3>《一场雨的三种剪法》：同一段素材，三种情绪</h3>
+            <p>用同一段两分半的雨天素材，剪出"等待""告别""重逢"三个版本，逐帧对比节奏、留白与音乐进入的时机。适合刚接触叙事的剪辑新手反复看。</p>
+            <div class="mmyh-videorow__foot">
+              <div class="mmyh-meta"><span>▶ 9.8万播放</span><span>♡ 3,116</span><span>☆ 2,470</span></div>
+              <div class="mmyh-acts">
+                <button class="mmyh-act" type="button" data-mmyh-like>♡ 喜欢 <span data-mmyh-like-count>3,116</span></button>
+                <button class="mmyh-act" type="button" data-mmyh-save>☆ 收藏</button>
+                <button class="mmyh-act" type="button" data-mmyh-copy="https://example.invalid/mmyh/film/rain-three-cuts">复制链接</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="mmyh-videorow">
+          <div class="mmyh-videorow__no">03</div>
+          <div>
+            <div class="mmyh-meta" style="margin-bottom:6px;"><span class="mmyh-tag mmyh-tag--blue">在地文化</span><span>作者：叶柏</span><span>21:48</span></div>
+            <h3>《做一把椅子要多久》：木作师傅的第九十三天</h3>
+            <p>镜头在一间不到三十平方米的木工房里待了三个月，记录一把圈椅从选料到上蜡的全部过程。师傅说，慢不是姿态，是材料要求的。</p>
+            <div class="mmyh-videorow__foot">
+              <div class="mmyh-meta"><span>▶ 8.2万播放</span><span>♡ 2,704</span><span>☆ 1,358</span></div>
+              <div class="mmyh-acts">
+                <button class="mmyh-act" type="button" data-mmyh-like>♡ 喜欢 <span data-mmyh-like-count>2,704</span></button>
+                <button class="mmyh-act" type="button" data-mmyh-save>☆ 收藏</button>
+                <button class="mmyh-act" type="button" data-mmyh-copy="https://example.invalid/mmyh/film/wooden-chair">复制链接</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="mmyh-videorow">
+          <div class="mmyh-videorow__no">04</div>
+          <div>
+            <div class="mmyh-meta" style="margin-bottom:6px;"><span class="mmyh-tag mmyh-tag--amber">教程干货</span><span>作者：沈未</span><span>15:20</span></div>
+            <h3>《采访提问的十个备用问题》：把"你感觉如何"换掉</h3>
+            <p>从十二个真实访谈片段出发，示范如何用具体场景替换抽象提问，让受访者讲出可拍摄、可剪辑的细节。附一份可打印的提问清单。</p>
+            <div class="mmyh-videorow__foot">
+              <div class="mmyh-meta"><span>▶ 6.4万播放</span><span>♡ 1,986</span><span>☆ 2,142</span></div>
+              <div class="mmyh-acts">
+                <button class="mmyh-act" type="button" data-mmyh-like>♡ 喜欢 <span data-mmyh-like-count>1,986</span></button>
+                <button class="mmyh-act" type="button" data-mmyh-save>☆ 收藏</button>
+                <button class="mmyh-act" type="button" data-mmyh-copy="https://example.invalid/mmyh/film/interview-questions">复制链接</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="mmyh-videorow">
+          <div class="mmyh-videorow__no">05</div>
+          <div>
+            <div class="mmyh-meta" style="margin-bottom:6px;"><span class="mmyh-tag">日常记录</span><span>作者：苏禾</span><span>11:36</span></div>
+            <h3>《外婆的厨房收音机》：用声音记住一个人</h3>
+            <p>全片没有出镜，只有声音与空镜：切菜的节奏、收音机的沙沙声、下午四点的蝉。创作者说，这是她能想到的最不打扰的纪念方式。</p>
+            <div class="mmyh-videorow__foot">
+              <div class="mmyh-meta"><span>▶ 15.3万播放</span><span>♡ 5,432</span><span>☆ 3,180</span></div>
+              <div class="mmyh-acts">
+                <button class="mmyh-act" type="button" data-mmyh-like>♡ 喜欢 <span data-mmyh-like-count>5,432</span></button>
+                <button class="mmyh-act" type="button" data-mmyh-save>☆ 收藏</button>
+                <button class="mmyh-act" type="button" data-mmyh-copy="https://example.invalid/mmyh/film/grandma-radio">复制链接</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="mmyh-videorow">
+          <div class="mmyh-videorow__no">06</div>
+          <div>
+            <div class="mmyh-meta" style="margin-bottom:6px;"><span class="mmyh-tag mmyh-tag--green">品牌故事</span><span>作者：平台编辑部</span><span>09:12</span></div>
+            <h3>《我们为什么还在拍长篇》：传媒映画麻传媒的第十一年</h3>
+            <p>平台自述型短片。从一间二十五平方米的剪辑房开始，讲清一件事：在短视频极快的时代，仍然有人愿意为一部二十四分钟的片子等三个月。</p>
+            <div class="mmyh-videorow__foot">
+              <div class="mmyh-meta"><span>▶ 4.7万播放</span><span>♡ 1,604</span><span>☆ 980</span></div>
+              <div class="mmyh-acts">
+                <button class="mmyh-act" type="button" data-mmyh-like>♡ 喜欢 <span data-mmyh-like-count>1,604</span></button>
+                <button class="mmyh-act" type="button" data-mmyh-save>☆ 收藏</button>
+                <button class="mmyh-act" type="button" data-mmyh-copy="https://example.invalid/mmyh/film/eleven-years">复制链接</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4 专题企划 -->
+  <section class="mmyh-section" id="mmyh-topics" aria-labelledby="mmyh-topics-title">
+    <div class="mmyh-wrap">
+      <span class="mmyh-eyebrow">Series / 专题企划</span>
+      <h2 class="mmyh-h2" id="mmyh-topics-title"><span>三个长期专题</span>，把一件事做深</h2>
+      <p class="mmyh-lead">专题是传媒映画麻传媒区别于普通视频列表的地方：一个题目至少跟一年，每隔一段时间回来看看它变成了什么。以下三个专题均在持续更新，欢迎创作者报名参与。</p>
+
+      <div class="mmyh-grid3" style="margin-top:24px;">
+        <article class="mmyh-topic">
+          <div class="mmyh-meta"><span class="mmyh-tag">城市探索</span><span class="mmyh-topic__status">更新中 · 第 4 季</span></div>
+          <h3>城市光影计划</h3>
+          <p style="font-size:.88rem;color:#4a4436;margin:0;">以"一条街、一座桥、一个早市"为单位，记录城市里被快速略过的角落。每季邀请十位创作者各拍一部十五分钟以内的短片。</p>
+          <ul>
+            <li>第 4 季主题：城市的清晨</li>
+            <li>已上线：老城区早市 · 渡口最后一班</li>
+            <li>征片中：跨江大桥的守夜人</li>
+          </ul>
+        </article>
+        <article class="mmyh-topic">
+          <div class="mmyh-meta"><span class="mmyh-tag mmyh-tag--blue">在地文化</span><span class="mmyh-topic__status">更新中 · 第 2 季</span></div>
+          <h3>手上有活</h3>
+          <p style="font-size:.88rem;color:#4a4436;margin:0;">聚焦木作、织补、修表、制陶等手工行业，用长镜头看一双手如何完成一件东西。不介绍"匠人精神"，只拍手上的过程。</p>
+          <ul>
+            <li>已上线：圈椅 · 补锅 · 修表摊的下午</li>
+            <li>拍摄中：最后一间刻章铺</li>
+            <li>开放投稿：老手艺人的一天</li>
+          </ul>
+        </article>
+        <article class="mmyh-topic">
+          <div class="mmyh-meta"><span class="mmyh-tag mmyh-tag--amber">创作幕后</span><span class="mmyh-topic__status">更新中 · 第 12 期</span></div>
+          <h3>剪辑台前</h3>
+          <p style="font-size:.88rem;color:#4a4436;margin:0;">把剪辑软件的时间线摊开给观众看：为什么删掉一场好戏、为什么一句台词要往后挪三秒。适合想从"拍"走向"讲"的人。</p>
+          <ul>
+            <li>已上线：一场雨的三种剪法 · 留白的尺度</li>
+            <li>新一期：三十分钟片子如何压到二十四分钟</li>
+            <li>附：可下载的剪辑对照表</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5 创作者矩阵 -->
+  <section class="mmyh-section mmyh-section--tight" id="mmyh-authors" aria-labelledby="mmyh-authors-title">
+    <div class="mmyh-wrap">
+      <span class="mmyh-eyebrow">Creators / 创作者</span>
+      <h2 class="mmyh-h2" id="mmyh-authors-title">在传媒映画麻传媒 <span>驻站的六位创作者</span></h2>
+      <p class="mmyh-lead">平台的创作者来自纪录、剪辑、声音、摄影等不同工种。他们既在这里发布作品，也参与选题评审与新人辅导——这也是我们说的"社区"。</p>
+
+      <div class="mmyh-authors" style="margin-top:24px;">
+        <article class="mmyh-author">
+          <div class="mmyh-avatar" style="background:#b3352c;">林</div>
+          <div>
+            <h3>林见山</h3>
+            <div class="mmyh-author__field">擅长领域：城市纪录 · 长镜头调度</div>
+            <div class="mmyh-author__nums"><span>作品 46 部</span><span>关注者 8.6 万</span></div>
+            <p>拍了九年城市纪录，习惯在一个地点蹲到第三次才开机。认为一部片子最重要的不是拍到什么，而是知道可以放弃什么。代表作《沿着旧铁路走一天》。</p>
+            <div class="mmyh-acts">
+              <button class="mmyh-act" type="button" data-mmyh-author="林见山|城市纪录 · 长镜头调度|46 部作品 · 8.6 万关注者。拍了九年城市纪录，习惯在一个地点蹲到第三次才开机。《沿着旧铁路走一天》导演。">作者资料</button>
+            </div>
+          </div>
+        </article>
+        <article class="mmyh-author">
+          <div class="mmyh-avatar" style="background:#3f5f52;">周</div>
+          <div>
+            <h3>周叙</h3>
+            <div class="mmyh-author__field">擅长领域：剪辑叙事 · 节奏设计</div>
+            <div class="mmyh-author__nums"><span>作品 63 部</span><span>关注者 11.2 万</span></div>
+            <p>从业十七年的剪辑师，参与过纪录片、广告与剧情短片。讲课从不谈软件快捷键，只谈"观众会在第几秒走神"。最近在整理一套面向新人的剪辑对照表。</p>
+            <div class="mmyh-acts">
+              <button class="mmyh-act" type="button" data-mmyh-author="周叙|剪辑叙事 · 节奏设计|63 部作品 · 11.2 万关注者。从业十七年，只谈观众何时走神。平台《剪辑台前》专题主理人。">作者资料</button>
+            </div>
+          </div>
+        </article>
+        <article class="mmyh-author">
+          <div class="mmyh-avatar" style="background:#c07a2c;">苏</div>
+          <div>
+            <h3>苏禾</h3>
+            <div class="mmyh-author__field">擅长领域：声音记录 · 日常影像</div>
+            <div class="mmyh-author__nums"><span>作品 38 部</span><span>关注者 13.4 万</span></div>
+            <p>偏爱用声音作为主要材料，作品里常有大段没有画面的环境声。她说记录家人的最好方式不是让他们面对镜头，而是让他们继续做手上的事。</p>
+            <div class="mmyh-acts">
+              <button class="mmyh-act" type="button" data-mmyh-author="苏禾|声音记录 · 日常影像|38 部作品 · 13.4 万关注者。以声音与空镜记录家人与日常，《外婆的厨房收音机》作者。">作者资料</button>
+            </div>
+          </div>
+        </article>
+        <article class="mmyh-author">
+          <div class="mmyh-avatar" style="background:#2f5470;">叶</div>
+          <div>
+            <h3>叶柏</h3>
+            <div class="mmyh-author__field">擅长领域：手工艺纪录 · 在地文化</div>
+            <div class="mmyh-author__nums"><span>作品 29 部</span><span>关注者 6.1 万</span></div>
+            <p>常年在乡镇跑，拍木作、打铁、修伞这些正在减少的行当。设备极简，一台机身两盏灯，多数时间用来等师傅把一道工序做完。『手上有活』专题主理人。</p>
+            <div class="mmyh-acts">
+              <button class="mmyh-act" type="button" data-mmyh-author="叶柏|手工艺纪录 · 在地文化|29 部作品 · 6.1 万关注者。拍摄木作、打铁、修伞等行当，专题《手上有活》主理人。">作者资料</button>
+            </div>
+          </div>
+        </article>
+        <article class="mmyh-author">
+          <div class="mmyh-avatar" style="background:#7b4a8c;">沈</div>
+          <div>
+            <h3>沈未</h3>
+            <div class="mmyh-author__field">擅长领域：人物访谈 · 提问方法</div>
+            <div class="mmyh-author__nums"><span>作品 52 部</span><span>关注者 9.7 万</span></div>
+            <p>做过五年人物记者，转行拍摄后仍保留记笔记的习惯。她的访谈片子往往只有两个人、一张桌子，却能让人听完整段二十分钟的对白。</p>
+            <div class="mmyh-acts">
+              <button class="mmyh-act" type="button" data-mmyh-author="沈未|人物访谈 · 提问方法|52 部作品 · 9.7 万关注者。前人物记者，现专注访谈影像，主张用具体场景替换抽象提问。">作者资料</button>
+            </div>
+          </div>
+        </article>
+        <article class="mmyh-author">
+          <div class="mmyh-avatar" style="background:#8c241d;">陈</div>
+          <div>
+            <h3>陈迟</h3>
+            <div class="mmyh-author__field">擅长领域：纪实短片 · 固定机位</div>
+            <div class="mmyh-author__nums"><span>作品 24 部</span><span>关注者 5.3 万</span></div>
+            <p>喜欢把摄影机放在一个位置就不动，让人和事自己走进画面。他说固定机位不是偷懒，是给被拍摄者一个可以习惯的空间。《一条街的十二小时》导演。</p>
+            <div class="mmyh-acts">
+              <button class="mmyh-act" type="button" data-mmyh-author="陈迟|纪实短片 · 固定机位|24 部作品 · 5.3 万关注者。坚持固定机位纪实，《一条街的十二小时》导演。">作者资料</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关键词解析 M15 深度解析（长文） -->
+  <section class="mmyh-section" id="mmyh-insight" aria-labelledby="mmyh-insight-title">
+    <div class="mmyh-wrap">
+      <span class="mmyh-eyebrow">Insight / 深度解析</span>
+      <h2 class="mmyh-h2" id="mmyh-insight-title">读懂"传媒映画麻传媒"<span>：一个影像品牌如何长成社区</span></h2>
+      <p class="mmyh-lead">这一节不推销作品，而是把品牌拆开讲清楚：它从哪里来、靠什么支撑内容品质、又为什么值得被长期关注。如果你第一次来到官方网站，从这里开始最合适。</p>
+
+      <div class="mmyh-prose" style="margin-top:22px;">
+        <h3>一、从"映画"两个字说起：一个传媒品牌的内容原点</h3>
+        <p>"传媒映画麻传媒"这个名字里，"传媒"指向传播与组织，"映画"指向影像本身，"麻"则是创始团队最初那间工作室的门牌号缩写——二十几平方米，一台旧监视器，一张被胶带反复缠过的桌子。2015 年，四个人在这间屋子里剪完了第一部二十分钟的短片，片尾字幕里没有公司名，只有"麻工作室"四个字。后来团队扩张、业务变多、开始做专题与社区，名字也就顺势延展成了今天的传媒映画麻传媒。企业官方始终保留那段历史：官网的品牌故事页第一张图，就是那间屋子的门牌。</p>
+        <p>这不是一段装饰性的创业叙事。它决定了这个视频品牌后来很多选择：优先拍人而不是拍产品，优先做长片而不是追热点，优先把一个题目跟一年而不是一周换一个。对一家以影像为核心的企业来说，内容生态不是靠数量堆出来的，而是靠一批愿意反复回到同一个地方的人慢慢养出来的。传媒映画麻传媒的定位，正是为这批人提供一个稳定、专业、可被信赖的发布与交流场所。</p>
+
+        <div class="mmyh-pull">"我们不太相信一部片子能改变什么，但相信十一年、两千多部片子叠在一起，会留下一点东西。"——平台内容负责人在品牌十周年短片中的表述</div>
+
+        <h3>二、原创、正版、高清：内容品质的三条底线</h3>
+        <p>在视频内容极度充裕的今天，"看到"已经不难，"看到值得看的"才难。传媒映画麻传媒把内容品质拆成三条可执行的底线。第一是原创：平台对每一部上架作品要求完整的创作说明与素材来源记录，搬运、二剪、无授权配乐一律不进入主站推荐位。第二是正版：所有音乐、字体、影像素材需提供授权凭证，平台与多家版权方建立了长期合作，创作者可以在站内直接申请使用。第三是高清：主站作品默认提供 1080P 及以上清晰度，重点专题提供 4K 版本，并针对移动网络做了自适应码率。</p>
+        <p>这三条听起来朴素，执行起来却很贵。为了保证原创审核不流于形式，平台设立了由六位驻站创作者轮值的评审小组，每部投稿至少两人交叉审核；为了正版合规，编辑部维护了一份持续更新的授权素材清单，任何人可以查到某段音乐能否商用；为了高清体验，技术团队把转码流程从四小时压缩到四十分钟。行业里常说"内容为王"，但真正决定一个平台口碑的，往往是这些看不见的流程。</p>
+
+        <h3>三、创作者社区：从发布作品到共同成长</h3>
+        <p>如果说作品是传媒映画麻传媒的门面，创作者社区就是它的地基。目前平台有 386 位签约与驻站创作者，覆盖纪录、访谈、教程、声音、摄影、动画等方向。社区并非一个松散的通讯录，而是有具体机制的：每月一次的选题会向所有驻站创作者开放，任何人可以带着一个还没成形的想法来讨论；每季度一次的看片会要求每位参与者必须给别人的片子写三百字以上的反馈；每年一次的创作者成长营则把剪辑、叙事、声音设计拆成可练习的课程，往期学员已经有二十余人在站内开设了自己的专栏。</p>
+        <p>这套机制的价值在于，它让"社区"从一个宣传词变成了可感知的体验。新人第一次投稿，通常会收到至少两条具体建议，而不是一句"加油"；成熟创作者也愿意把废片拿出来讲，因为平台明确规定不使用播放量给创作者排名。有位创作者在访谈里说，他留下来不是因为这里流量最大，而是因为"这里的评论区会讨论镜头，而不只是点赞"。这种氛围，正是一个影像品牌最难被复制的部分。</p>
+
+        <h3>四、企业责任与未来：让影像回到真实生活</h3>
+        <p>作为一家持续运营十一年的企业，传媒映画麻传媒也在思考自己的社会责任。平台每年拿出固定比例的预算支持非商业纪录项目，主题涉及老城区更新、传统手艺存续、乡村教育等；同时向学校与公益机构免费开放部分影像素材，供教学与研究使用。这些项目不带来直接收入，却让品牌与真实生活保持了连接——我们始终认为，影像的力量来自它离地面足够近。</p>
+        <p>面向未来，平台会继续做三件事：一是把专题做得更深，让"城市光影计划""手上有活""剪辑台前"成为可以持续十年的内容资产；二是把创作者支持做得更实，包括开放更多拍摄资源、完善收益分配、增加新人曝光位；三是把观看体验做得更稳，从播放器到搜索再到跨端同步，让每一部作品都能被安静地看完。如果你也拍片，欢迎从投稿入口提交作品；如果你只是来看片，那么这里已经有足够多的内容等着你。官方网站会持续更新，我们也会继续用作品说话。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6 数据榜单 + 评价 -->
+  <section class="mmyh-section mmyh-section--tight" id="mmyh-voices" aria-labelledby="mmyh-voices-title">
+    <div class="mmyh-wrap">
+      <span class="mmyh-eyebrow">Rank &amp; Voices / 榜单与口碑</span>
+      <h2 class="mmyh-h2" id="mmyh-voices-title">热度榜 + <span>观众口碑</span></h2>
+
+      <div class="mmyh-grid2" style="margin-top:22px;align-items:start;">
+        <div>
+          <h3 style="font-size:1.08rem;margin-bottom:12px;">本月热度榜（按完整播放率排序）</h3>
+          <div class="mmyh-videolist">
+            <article class="mmyh-card" style="padding:16px 18px;">
+              <div class="mmyh-meta"><span class="mmyh-tag">No.1</span><span>完整播放率 78.4%</span></div>
+              <h3 style="font-size:.98rem;margin:8px 0 4px;">《外婆的厨房收音机》</h3>
+              <p style="font-size:.84rem;color:#4a4436;margin:0;">声音纪录 · 苏禾 · 11:36</p>
+            </article>
+            <article class="mmyh-card" style="padding:16px 18px;">
+              <div class="mmyh-meta"><span class="mmyh-tag mmyh-tag--green">No.2</span><span>完整播放率 71.2%</span></div>
+              <h3 style="font-size:.98rem;margin:8px 0 4px;">《一条街的十二小时》</h3>
+              <p style="font-size:.84rem;color:#4a4436;margin:0;">纪实短片 · 陈迟 · 24:16</p>
+            </article>
+            <article class="mmyh-card" style="padding:16px 18px;">
+              <div class="mmyh-meta"><span class="mmyh-tag mmyh-tag--blue">No.3</span><span>完整播放率 64.9%</span></div>
+              <h3 style="font-size:.98rem;margin:8px 0 4px;">《做一把椅子要多久》</h3>
+              <p style="font-size:.84rem;color:#4a4436;margin:0;">在地文化 · 叶柏 · 21:48</p>
+            </article>
+            <article class="mmyh-card" style="padding:16px 18px;">
+              <div class="mmyh-meta"><span class="mmyh-tag mmyh-tag--amber">新人榜 No.1</span><span>新增关注 1,842</span></div>
+              <h3 style="font-size:.98rem;margin:8px 0 4px;">《在便利店值了三个月夜班》</h3>
+              <p style="font-size:.84rem;color:#4a4436;margin:0;">日常记录 · 新人创作者 阿柘 · 13:05</p>
+            </article>
+          </div>
+        </div>
+
+        <div>
+          <div class="mmyh-rating">
+            <div>
+              <div class="mmyh-rating__score">4.8<small> / 5</small></div>
+              <div class="mmyh-meta"><span>基于 1,284 条有效评价</span></div>
+            </div>
+            <div class="mmyh-rating__bars">
+              <div class="mmyh-rating__bar"><span>内容品质</span><i style="width:92%;"></i><span>4.8</span></div>
+              <div class="mmyh-rating__bar"><span>观看体验</span><i style="width:86%;"></i><span>4.6</span></div>
+              <div class="mmyh-rating__bar"><span>社区氛围</span><i style="width:94%;"></i><span>4.9</span></div>
+            </div>
+          </div>
+          <div class="mmyh-reviews">
+            <article class="mmyh-review">
+              <div class="mmyh-review__head">
+                <div class="mmyh-review__ava" style="background:#b3352c;">顾</div>
+                <div><div class="mmyh-review__name">顾南</div><div class="mmyh-review__stars">★★★★★</div></div>
+              </div>
+              <p>看完《一条街的十二小时》愣了很久。没有旁白、没有配乐煽情，但收摊那段我反复看了三遍。这才是我理解的纪录片。</p>
+              <span class="mmyh-review__src">评价作品 · 纪实短片</span>
+            </article>
+            <article class="mmyh-review">
+              <div class="mmyh-review__head">
+                <div class="mmyh-review__ava" style="background:#3f5f52;">阿</div>
+                <div><div class="mmyh-review__name">阿柘</div><div class="mmyh-review__stars">★★★★★</div></div>
+              </div>
+              <p>作为刚投稿的新人，收到两条两百多字的修改建议，很具体，连第几分钟该删都写了。这个平台对新人真的友好。</p>
+              <span class="mmyh-review__src">评价平台社区</span>
+            </article>
+            <article class="mmyh-review">
+              <div class="mmyh-review__head">
+                <div class="mmyh-review__ava" style="background:#c07a2c;">苏</div>
+                <div><div class="mmyh-review__name">苏叶</div><div class="mmyh-review__stars">★★★★☆</div></div>
+              </div>
+              <p>高清画质确实稳，4K 版本在电视上看很舒服。唯一希望增加的是按拍摄设备筛选，找同类作品会方便些。</p>
+              <span class="mmyh-review__src">评价观看体验</span>
+            </article>
+            <article class="mmyh-review">
+              <div class="mmyh-review__head">
+                <div class="mmyh-review__ava" style="background:#7b4a8c;">老</div>
+                <div><div class="mmyh-review__name">老周</div><div class="mmyh-review__stars">★★★★★</div></div>
+              </div>
+              <p>剪辑台前专题我逐期追，讲留白那段帮我改掉了炫技的毛病。建议把对照素材打包下载，练习起来更顺。</p>
+              <span class="mmyh-review__src">评价教程内容</span>
+            </article>
+            <article class="mmyh-review">
+              <div class="mmyh-review__head">
+                <div class="mmyh-review__ava" style="background:#2f5470;">木</div>
+                <div><div class="mmyh-review__name">木工小许</div><div class="mmyh-review__stars">★★★★★</div></div>
+              </div>
+              <p>《做一把椅子要多久》让我第一次觉得自己的日常被认真对待。镜头没有猎奇，这点特别难得。</p>
+              <span class="mmyh-review__src">评价在地文化</span>
+            </article>
+            <article class="mmyh-review">
+              <div class="mmyh-review__head">
+                <div class="mmyh-review__ava" style="background:#8c241d;">林</div>
+                <div><div class="mmyh-review__name">林夕</div><div class="mmyh-review__stars">★★★★☆</div></div>
+              </div>
+              <p>整体很喜欢，就是搜索有时要试两个关键词才找到片子。希望搜索能支持作者名模糊匹配。</p>
+              <span class="mmyh-review__src">评价站内搜索</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 企业动态 与 创作灵感 M9 -->
+  <section class="mmyh-section mmyh-section--tight" id="mmyh-news" aria-labelledby="mmyh-news-title">
+    <div class="mmyh-wrap">
+      <span class="mmyh-eyebrow">News / 企业动态</span>
+      <h2 class="mmyh-h2" id="mmyh-news-title">企业动态与 <span>创作灵感</span></h2>
+
+      <div class="mmyh-grid2" style="margin-top:22px;align-items:start;">
+        <div>
+          <h3 style="font-size:1.06rem;margin-bottom:10px;">近期更新</h3>
+          <div class="mmyh-timeline">
+            <div class="mmyh-timeline__item">
+              <div class="mmyh-timeline__date">2026-11-20</div>
+              <div>
+                <h3>城市光影计划第 4 季征片开启</h3>
+                <p>本季主题"城市的清晨"，征集 15 分钟以内原创短片，投稿截止 12 月 18 日，入选作品将在官网首屏推荐位展映。</p>
+              </div>
+            </div>
+            <div class="mmyh-timeline__item">
+              <div class="mmyh-timeline__date">2026-11-18</div>
+              <div>
+                <h3>《一条街的十二小时》4K 正版上线</h3>
+                <p>陈迟导演新作全网上线，同步开放 4K 版本与导演评论音轨，会员可在站内下载用于学习研究。</p>
+              </div>
+            </div>
+            <div class="mmyh-timeline__item">
+              <div class="mmyh-timeline__date">2026-11-14</div>
+              <div>
+                <h3>创作者成长营第 12 期报名中</h3>
+                <p>本期设置剪辑叙事与访谈提问两个方向，共 40 个名额，往期学员可申请助教岗位。</p>
+              </div>
+            </div>
+            <div class="mmyh-timeline__item">
+              <div class="mmyh-timeline__date">2026-11-08</div>
+              <div>
+                <h3>年度口碑榜投票通道开放</h3>
+                <p>36 部原创作品入围，投票权重由观众评分与创作者互评各占一半，12 月 28 日公布结果。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="font-size:1.06rem;margin-bottom:10px;">创作灵感速递</h3>
+          <div class="mmyh-videolist">
+            <article class="mmyh-card" style="padding:16px 18px;">
+              <div class="mmyh-meta"><span class="mmyh-tag">脚本灵感</span></div>
+              <h3 style="font-size:.96rem;margin:8px 0 4px;">从一个"每天都会发生"的动作开始</h3>
+              <p style="font-size:.85rem;color:#4a4436;margin:0;">选一个家里每天都会出现的动作，连续拍七天，只用一个角度。第七天你会发现它已经变成一个故事。这个练习对训练耐心特别有效。</p>
+            </article>
+            <article class="mmyh-card" style="padding:16px 18px;">
+              <div class="mmyh-meta"><span class="mmyh-tag mmyh-tag--green">标题建议</span></div>
+              <h3 style="font-size:.96rem;margin:8px 0 4px;">把"记录"换成"观察"，标题会具体很多</h3>
+              <p style="font-size:.85rem;color:#4a4436;margin:0;">《记录一个早市》很空，《一条街的十二小时》有边界。给标题一个人、一个时间、一个数字，观众就知道自己要看什么。</p>
+            </article>
+            <article class="mmyh-card" style="padding:16px 18px;">
+              <div class="mmyh-meta"><span class="mmyh-tag mmyh-tag--blue">剪辑思路</span></div>
+              <h3 style="font-size:.96rem;margin:8px 0 4px;">先剪声音，再剪画面</h3>
+              <p style="font-size:.85rem;color:#4a4436;margin:0;">把素材的声音单独拉一条时间线，按呼吸和节奏排好，再把画面贴上去。这个方法能有效减少"画面很美但看着累"的成片。</p>
+            </article>
+          </div>
+          <div style="margin-top:14px;">
+            <button class="mmyh-btn mmyh-btn--primary" type="button" data-mmyh-modal="submit">我要投稿 / 报名专题</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 FAQ + 合作 -->
+  <section class="mmyh-section" id="mmyh-faq" aria-labelledby="mmyh-faq-title">
+    <div class="mmyh-wrap">
+      <span class="mmyh-eyebrow">Help / 帮助与伙伴</span>
+      <h2 class="mmyh-h2" id="mmyh-faq-title">常见问题 <span>与合作伙伴</span></h2>
+
+      <div class="mmyh-grid2" style="margin-top:22px;align-items:start;">
+        <div class="mmyh-faq">
+          <details open>
+            <summary>在传媒映画麻传媒官网投稿需要什么条件？</summary>
+            <p>作品需为原创且拥有完整版权，时长建议 5–30 分钟，提供成片与素材来源说明即可。新人首次投稿没有粉丝门槛，评审小组会在 7 个工作日内给出反馈。</p>
+          </details>
+          <details>
+            <summary>投稿后会获得什么支持？</summary>
+            <p>入选作品会进入主站推荐池并获得高清转码与字幕校对支持；专题类作品可申请正版音乐授权；表现突出的创作者可受邀参加季度看片会与成长营。</p>
+          </details>
+          <details>
+            <summary>平台上的影片可以下载吗？</summary>
+            <p>部分作品开放下载用于学习研究，需在作品页点击"申请下载"并勾选用途说明。所有下载文件均为正版授权版本，请勿用于商业放映或二次传播。</p>
+          </details>
+          <details>
+            <summary>我可以把作品链接分享到其他社交平台吗？</summary>
+            <p>可以。每部作品页都提供复制链接按钮，欢迎分享。站内也支持分享提示，方便把作品转发给一起拍片的朋友。</p>
+          </details>
+          <details>
+            <summary>参加专题企划需要单独报名吗？</summary>
+            <p>需要。每个专题页面底部都有报名入口，填写创作计划与拍摄周期即可。报名不影响常规投稿，两套流程相互独立。</p>
+          </details>
+          <details>
+            <summary>如何参与年度口碑榜投票？</summary>
+            <p>注册账号并完成一次作品观看即可获得投票资格。每位用户对同一作品只能投一票，投票结果由观众评分与创作者互评共同构成。</p>
+          </details>
+        </div>
+
+        <div>
+          <h3 style="font-size:1.06rem;margin-bottom:10px;">内容合作伙伴</h3>
+          <div class="mmyh-partners">
+            <span class="mmyh-partner"><i></i>城市影像档案馆</span>
+            <span class="mmyh-partner"><i></i>南岸电影学院</span>
+            <span class="mmyh-partner"><i></i>慢镜头器材</span>
+            <span class="mmyh-partner"><i></i>青禾独立书店</span>
+            <span class="mmyh-partner"><i></i>回声声音工作室</span>
+          </div>
+          <h3 style="font-size:1.06rem;margin:22px 0 10px;">联系与投稿</h3>
+          <p style="font-size:.9rem;color:#4a4436;">商务合作：brand@mmyh.example　投稿咨询：submit@mmyh.example　工作日 10:00–18:00 回复。也可以通过站内投稿入口提交作品，我们承诺每份投稿都会被认真看完。</p>
+          <div class="mmyh-acts" style="margin-top:10px;">
+            <button class="mmyh-act" type="button" data-mmyh-modal="submit">投稿入口</button>
+            <button class="mmyh-act" type="button" data-mmyh-modal="report">反馈问题</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- S8 页脚 -->
+<footer class="mmyh-footer">
+  <div class="mmyh-wrap">
+    <div class="mmyh-footer__grid">
+      <div>
+        <div class="mmyh-footer__brand">
+          <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#b3352c"/>
+            <path d="M14 20h26v7H14zM14 30h36v7H14zM14 40h22v7H14z" fill="#fdf3e7"/>
+            <circle cx="48" cy="43" r="8" fill="#f2b134"/>
+          </svg>
+          <strong>传媒映画麻传媒</strong>
+        </div>
+        <p>影像内容与创作者社区官方门户。以原创、正版、高清为底线，持续记录真实生活，为创作者与企业搭建值得信赖的内容生态。</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#mmyh-focus">本周焦点</a></li>
+          <li><a href="#mmyh-videos">影像库</a></li>
+          <li><a href="#mmyh-topics">专题企划</a></li>
+          <li><a href="#mmyh-authors">创作者</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#mmyh-insight">品牌解析</a></li>
+          <li><a href="#mmyh-news">企业动态</a></li>
+          <li><a href="#mmyh-voices">口碑与榜单</a></li>
+          <li><a href="#mmyh-faq">帮助中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与</h4>
+        <ul>
+          <li><button class="mmyh-act" style="background:transparent;border:0;color:#bdb2a0;padding:0;" type="button" data-mmyh-modal="submit">投稿入口</button></li>
+          <li><button class="mmyh-act" style="background:transparent;border:0;color:#bdb2a0;padding:0;" type="button" data-mmyh-modal="report">反馈与举报</button></li>
+          <li><button class="mmyh-act" style="background:transparent;border:0;color:#bdb2a0;padding:0;" type="button" data-mmyh-modal="share">分享本站</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mmyh-footer__bottom">
+      <span>传媒映画麻传媒官方网站 · 版权所有 © 2015–2026 · 持续运营中</span>
+      <span>内容备案：影像备字第 2015-086 号 · 网络文化经营许可（示例）</span>
+    </div>
+  </div>
+</footer>
+
+<button class="mmyh-backtop" id="mmyh-backtop" type="button" aria-label="回到顶部">↑</button>
+<div class="mmyh-toast" id="mmyh-toast" role="status" aria-live="polite"></div>
+
+<!-- 弹窗 -->
+<div class="mmyh-modal" id="mmyh-modal" aria-hidden="true">
+  <div class="mmyh-modal__mask" data-mmyh-close></div>
+  <div class="mmyh-modal__box" role="dialog" aria-modal="true" aria-labelledby="mmyh-modal-title">
+    <button class="mmyh-modal__close" type="button" aria-label="关闭弹窗" data-mmyh-close>×</button>
+    <div id="mmyh-modal-content"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById("mmyh-toast");
+  var toastTimer = null;
+  function toast(msg){
+    if(!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add("is-show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove("is-show"); }, 2200);
+  }
+
+  /* 移动导航折叠 */
+  var burger = document.getElementById("mmyh-burger");
+  var nav = document.getElementById("mmyh-nav");
+  if(burger && nav){
+    burger.addEventListener("click", function(){
+      var open = nav.classList.toggle("is-open");
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    nav.addEventListener("click", function(e){
+      if(e.target.closest("a")){
+        nav.classList.remove("is-open");
+        burger.setAttribute("aria-expanded","false");
+      }
+    });
+  }
+
+  /* 搜索反馈 */
+  var searchForm = document.getElementById("mmyh-search");
+  var searchInput = document.getElementById("mmyh-search-input");
+  var searchHint = document.getElementById("mmyh-search-hint");
+  function doSearch(){
+    var q = (searchInput.value || "").trim();
+    if(!q){
+      searchHint.textContent = "试试搜「一条街」「周叙」「城市光影计划」或「剪辑」。";
+      return;
+    }
+    var pool = ["一条街的十二小时","沿着旧铁路走一天","一场雨的三种剪法","做一把椅子要多久","外婆的厨房收音机","剪辑台前","城市光影计划","手上有活","周叙","林见山"];
+    var hit = pool.filter(function(item){ return item.indexOf(q) > -1 || q.indexOf(item) > -1; });
+    if(hit.length){
+      searchHint.textContent = "为你找到 " + hit.length + " 个相关结果：" + hit.slice(0,4).join(" / ") + "，已定位到影像库。";
+      var target = document.getElementById("mmyh-videos");
+      if(target) target.scrollIntoView({behavior:"smooth", block:"start"});
+    }else{
+      searchHint.textContent = "暂未找到与「" + q + "」直接匹配的条目，可试试搜索作品名、创作者昵称或专题名。";
+    }
+  }
+  if(searchForm){
+    searchForm.addEventListener("submit", function(e){ e.preventDefault(); doSearch(); });
+  }
+  if(searchInput){
+    searchInput.addEventListener("input", function(){
+      if(!searchInput.value.trim()) searchHint.textContent = "";
+    });
+  }
+
+  /* 弹窗基础 */
+  var modal = document.getElementById("mmyh-modal");
+  var modalContent = document.getElementById("mmyh-modal-content");
+  function openModal(html){
+    if(!modal || !modalContent) return;
+    modalContent.innerHTML = html;
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden","false");
+    document.body.style.overflow = "hidden";
+  }
+  function closeModal(){
+    if(!modal) return;
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden","true");
+    document.body.style.overflow = "";
+  }
+  if(modal){
+    modal.addEventListener("click", function(e){
+      if(e.target.hasAttribute("data-mmyh-close")) closeModal();
+    });
+    document.addEventListener("keydown", function(e){
+      if(e.key === "Escape") closeModal();
+    });
+  }
+
+  /* 点赞 / 收藏 */
+  document.addEventListener("click", function(e){
+    var likeBtn = e.target.closest("[data-mmyh-like]");
+    if(likeBtn){
+      var counter = likeBtn.querySelector("[data-mmyh-like-count]");
+      if(!counter){
+        likeBtn.classList.toggle("is-liked");
+        toast(likeBtn.classList.contains("is-liked") ? "已加入你的喜欢列表" : "已取消喜欢");
+        return;
+      }
+      var n = parseInt(counter.textContent.replace(/[^\d]/g,""),10) || 0;
+      if(likeBtn.classList.contains("is-liked")){
+        likeBtn.classList.remove("is-liked");
+        counter.textContent = (n - 1).toLocaleString("zh-CN");
+        toast("已取消喜欢");
+      }else{
+        likeBtn.classList.add("is-liked");
+        counter.textContent = (n + 1).toLocaleString("zh-CN");
+        toast("已点赞，感谢支持原创作品");
+      }
+      return;
+    }
+    var saveBtn = e.target.closest("[data-mmyh-save]");
+    if(saveBtn){
+      var on = saveBtn.classList.toggle("is-saved");
+      saveBtn.textContent = on ? "★ 已收藏" : "☆ 收藏";
+      toast(on ? "已收藏到我的片单" : "已从片单移除");
+      return;
+    }
+    var copyBtn = e.target.closest("[data-mmyh-copy]");
+    if(copyBtn){
+      var text = copyBtn.getAttribute("data-mmyh-copy");
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){ toast("链接已复制，可以分享给朋友了"); }, function(){ toast("复制失败，请手动选择链接"); });
+      }else{
+        toast("链接已生成：" + text);
+      }
+      return;
+    }
+    var authorBtn = e.target.closest("[data-mmyh-author]");
+    if(authorBtn){
+      var parts = authorBtn.getAttribute("data-mmyh-author").split("|");
+      openModal(
+        '<h3 id="mmyh-modal-title">' + parts[0] + '</h3>' +
+        '<p><strong>擅长领域：</strong>' + parts[1] + '</p>' +
+        '<p>' + parts[2] + '</p>' +
+        '<p style="color:#6f6552;font-size:.85rem;">该创作者在传媒映画麻传媒官网拥有独立专栏，作品均可高清观看。</p>' +
+        '<div class="mmyh-shares"><button class="mmyh-btn mmyh-btn--ghost" type="button" data-mmyh-close>关闭</button></div>'
+      );
+      return;
+    }
+    var modalBtn = e.target.closest("[data-mmyh-modal]");
+    if(modalBtn){
+      var type = modalBtn.getAttribute("data-mmyh-modal");
+      if(type === "submit"){
+        openModal(
+          '<h3 id="mmyh-modal-title">投稿 / 报名入口</h3>' +
+          '<p>请填写作品或专题信息，我们会在 7 个工作日内回复。所有投稿需为原创正版内容。</p>' +
+          '<label class="mmyh-field"><span>作品名称</span><input type="text" placeholder="例如：一条街的十二小时"></label>' +
+          '<label class="mmyh-field"><span>联系方式</span><input type="text" placeholder="邮箱或常用联系方式"></label>' +
+          '<label class="mmyh-field"><span>作品简介</span><textarea rows="3" placeholder="拍摄方向、时长、素材来源"></textarea></label>' +
+          '<div class="mmyh-shares"><button class="mmyh-btn mmyh-btn--primary" type="button" data-mmyh-mocksubmit>提交</button><button class="mmyh-btn mmyh-btn--ghost" type="button" data-mmyh-close>取消</button></div>'
+        );
+      }else if(type === "report"){
+        openModal(
+          '<h3 id="mmyh-modal-title">反馈与举报</h3>' +
+          '<p>如果你发现版权问题、内容错误或播放异常，请告诉我们，编辑部会尽快核实。</p>' +
+          '<label class="mmyh-field"><span>问题类型</span><input type="text" placeholder="版权 / 内容错误 / 播放异常"></label>' +
+          '<label class="mmyh-field"><span>具体描述</span><textarea rows="3" placeholder="请尽量写明作品名称与时间点"></textarea></label>' +
+          '<div class="mmyh-shares"><button class="mmyh-btn mmyh-btn--primary" type="button" data-mmyh-mocksubmit>提交反馈</button><button class="mmyh-btn mmyh-btn--ghost" type="button" data-mmyh-close>取消</button></div>'
+        );
+      }else if(type === "share"){
+        openModal(
+          '<h3 id="mmyh-modal-title">分享本站</h3>' +
+          '<p>把传媒映画麻传媒官网推荐给一起拍片的人。选择下面的渠道即可复制分享文案。</p>' +
+          '<div class="mmyh-shares">' +
+          '<button class="mmyh-btn mmyh-btn--primary" type="button" data-mmyh-copy="传媒映画麻传媒官方网站：原创影像与创作者社区">复制分享文案</button>' +
+          '<button class="mmyh-btn mmyh-btn--ghost" type="button" data-mmyh-copy="https://example.invalid/mmyh">复制官网链接</button>' +
+          '</div>'
+        );
+      }
+      return;
+    }
+    if(e.target.closest("[data-mmyh-mocksubmit]")){
+      toast("已收到，感谢你的参与，我们会尽快回复");
+      closeModal();
+    }
+  });
+
+  /* 回到顶部 */
+  var backtop = document.getElementById("mmyh-backtop");
+  if(backtop){
+    window.addEventListener("scroll", function(){
+      if(window.scrollY > 600) backtop.classList.add("is-show");
+      else backtop.classList.remove("is-show");
+    }, {passive:true});
+    backtop.addEventListener("click", function(){
+      window.scrollTo({top:0, behavior:"smooth"});
+    });
+  }
+})();
+</script>
+</body>
+                </html>
